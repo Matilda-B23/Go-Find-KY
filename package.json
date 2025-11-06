@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  },
+  "name": "go-find-ky",
+  "version": "1.0.0",
+  "description": "A web app demonstrating knowledge and skill. Used to log sightings of animals or birds. \r <<<<<<< HEAD\r Credit to Josh Comeau for the basic CSS reset used. (https://www.joshwcomeau.com/css/custom-css-reset)\r =======\r >>>>>>> 72142dfede6aa195675ce64d682ab9aef7e0d136",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matilda-B23/Go-Find-KY.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matilda-B23/Go-Find-KY/issues"
+  },
+  "homepage": "https://github.com/Matilda-B23/Go-Find-KY#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

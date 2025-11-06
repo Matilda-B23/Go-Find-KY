@@ -1,0 +1,20 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    to bottom right,
+    #f4f0d8 0%,
+    #c8d9a7 50%,
+    #556b2f 100%
+  );
+  font-family: sans-serif;
+}
+.banner {
+  width: 100%;
+  padding-top: 40%;
+  background-image: url(/Images/deer-in-the-woods.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
