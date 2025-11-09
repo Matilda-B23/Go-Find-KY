@@ -18,3 +18,9 @@ body {
   background-repeat: no-repeat;
   position: relative;
 }
+.bird-card img {
+  margin-top: 20px;
+  width: 200px; 
+  height: 150px;
+  object-fit: contain;
+}
