@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const PORT = 3000;
-
+//Below is calling the api, feeding in the api key from my env file, and using pagination to load so many per 'page' so it doesn't load it all at one time!//
 app.get('/api/birds', async (req, res) => {
   const page = req.query.page || 1; 
   const pageSize = req.query.pageSize || 50;
@@ -12,6 +12,7 @@ app.get('/api/birds', async (req, res) => {
     headers: {
       'API-Key': process.env.API_KEY } 
   });
+  //Below: taking the data from the API, and filtering it using .map to only show the data that I want to display.//
   const allBirds = await response.json();
  const filteredBirds = allBirds.entities.map(bird => ({
     name: bird.name,
