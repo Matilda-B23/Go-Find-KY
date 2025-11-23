@@ -1,11 +1,20 @@
+/* color pallet: 
+darkest green base : #4b5817
+lighter green: ##4c7840
+lighter: #638740
+lighter : #83944c
+lightest:#979951  */ 
+
 body {
   min-height: 100vh;
   margin: 0;
   background: linear-gradient(
     to bottom right,
-    #f4f0d8 0%,
-    #c8d9a7 50%,
-    #556b2f 100%
+    #979951 0%,
+    #83944c 25%,
+    #638740 50%,
+    #4c7840 75%,
+    #4b5817 100%
   );
   font-family: sans-serif;
 }
