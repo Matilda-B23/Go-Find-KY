@@ -1,25 +1,32 @@
 const searchInput = document.getElementById("bird-search");
 const searchButton = document.getElementById("search-button");
 const showAllButton = document.getElementById("show-all-button");
+let currentSearch = "";
 
 async function runSearch() {
+  if (!searchInput) return;
   const search = searchInput.value.trim();
   if (!/^[a-z\s'-]+$/i.test(search)) {
     alert("Invalid input: only a-z, spaces, - and '', are allowed.");
     return;
   }
 
-  currentSearch = search; 
+  currentSearch = search;
   loadAllBirds(currentSearch);
 }
 
-searchButton.addEventListener("click", runSearch);
 
-searchInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") runSearch();
-});
+  searchButton.addEventListener("click", runSearch);
 
-showAllButton.addEventListener("click", () => {
-  currentSearch = "";
-  loadAllBirds();
-});
+
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") runSearch();
+  });
+
+
+
+  showAllButton.addEventListener("click", () => {
+    currentSearch = "";
+    loadAllBirds();
+  });
+
