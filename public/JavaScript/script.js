@@ -1,9 +1,4 @@
-//variables defined for pagination, and morebirds and loading to inform the page if there are more to load//
-let currentPage = 1;
-const pageSize = 50;
-let loading = false;
-let moreBirds = true;
-let currentSearch = "";
+
 
 function createBirdCard(bird) {
   const card = document.createElement("div");
@@ -17,7 +12,7 @@ function createBirdCard(bird) {
   const status = document.createElement("p");
   status.textContent = "Conservation status - " + bird.status;
   const saved = localStorage.getItem(`bird-${bird.name}`);
-  const savedData = saved ? JSON.parse(saved) : null; //checks for saved data, if none displays nothing//
+  const savedData = saved ? JSON.parse(saved) : null;
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.checked = savedData?.seen || false;
@@ -26,7 +21,7 @@ function createBirdCard(bird) {
   seenCheckbox.prepend(checkbox);
   const commentArea = document.createElement("textarea");
   commentArea.value = savedData?.comment || "";
-  //Below if there is a change to the data, it will save this change to local storage, to the specific bird it was changed under.//
+
   checkbox.addEventListener("change", () => {
     const birdData = {
       seen: checkbox.checked,
@@ -41,7 +36,6 @@ function createBirdCard(bird) {
     };
     localStorage.setItem(`bird-${bird.name}`, JSON.stringify(birdData));
   });
-  //adding all created elements to the div on the html page//
   card.appendChild(img);
   card.appendChild(name);
   card.appendChild(status);
@@ -50,38 +44,23 @@ function createBirdCard(bird) {
   return card;
 }
 
-async function getBirds(page = 1, search = "") {
-  if (loading || !moreBirds) return;
-  loading = true;
-  //taking data received from the backend file, and using pagination to lazy load elements.//
+async function loadAllBirds(search = "") {
+  const birdContainer = document.getElementById("bird-container");
+  birdContainer.innerHTML = "";
   try {
     const response = await fetch(
-      `/api/birds?page=${page}&pageSize=${pageSize}${
-        search ? `&search=${encodeURIComponent(search)}` : ""
-      }`
-    );
+  `/api/birds${search ? `?search=${encodeURIComponent(search)}` : ""}`
+    ); 
+    
     const birds = await response.json();
-    const birdContainer = document.getElementById("bird-container");
+
     birds.forEach((bird) => {
       const card = createBirdCard(bird);
       birdContainer.appendChild(card);
     });
-    if (birds.length < pageSize) moreBirds = false;
   } catch (error) {
     console.error("Failed to load birds:", error);
-  } finally {
-    loading = false; //if no more birds to be loaded, stop trying to load//
   }
-} //below infine scroll to display all on one page but not load them all at the same time; load more within certain distance of the bottom of the page//
-window.addEventListener("scroll", () => {
-  if (
-    !loading &&
-    moreBirds &&
-    window.innerHeight + window.scrollY >= document.body.offsetHeight - 100
-  ) {
-    currentPage++;
-    getBirds(currentPage, currentSearch);
-  }
-});
-//finally running the function//
-getBirds(currentPage, currentSearch);
+}
+
+loadAllBirds();
