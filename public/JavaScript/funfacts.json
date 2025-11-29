@@ -1,3 +1,47 @@
-{
-    
-}
+[
+ {   "name" : "Blue Jay", 
+    "fact" : "Blue Jays are known for their intelligence and are known to mimic hawk calls to scare away competing birds."
+}, 
+ { "name" : "Peregrine Falcon", 
+   "fact" : "The Peregrine Falcon is the fastest bird in the world, capable of reaching speeds over 240 miles per hour during it's hunting dive."
+ },
+ { "name" : "Ringed Kingfisher", 
+   "fact" : "The Ringed Kingfisher is known for its distinctive call that sounds like a loud, rattling laugh."
+ }, 
+ { "name" : "American Crow" , 
+   "fact" : "Crows are incredibly intelligent birds, known to use tools, recognize human faces, and even hold grudges."
+ }, 
+ { "name" : "Turkey Vulture", 
+   "fact" : "Turkey Vultures are known to purge their stomachs when threatened, which can create a foul smell to deter predators."
+ }, 
+ { "name" : "Yellow-billed Cuckoo", 
+   "fact" : "The Yellow-billed Cuckoo will often lay its eggs in the nests of other bird species, a behavior known as brood parasitism."
+ }, 
+ { "name" : "Laysan Albatross", 
+   "fact" : "The oldest known wild bird is 'Wisdom,' is believed to be over 70 years old. Albatrosses can take long trips because they can sleep while flying."
+ }, 
+ { "name" : "Pileated Woodpecker", 
+   "fact" : "Woodpeckers have a special shock-absorbing skull structure that protects from the impact of pecking and their tongue wraps around their brain for added protection."
+ }, 
+ { "name" : "Killdeer", 
+   "fact" : "Killdeer are known for their 'broken-wing' act, where they feign injury to lure predators away from their nests."
+ }, 
+ { "name" : "California Condor", 
+   "fact" : "California Condors have a wingspan of up to 10 feet, making them the largest flying land bird in North America."
+ }, 
+ { "name" : "Whooping Crane", 
+   "fact" : "Whooping Cranes are one of the rarest bird species in North America, with a population that was once down to just 15 individuals in the 1940s. They are also the tallest North American bird, standing nearly 5 feet tall."
+ }, 
+ { "name" : "Mockingbird", 
+   "fact" : "Mockingbirds are known for their ability to mimic the songs of other bird species, as well as sounds from their environment, such as car alarms and barking dogs. They can recall and reproduce over 200 different sounds."
+ }, 
+ { "name" : "Calliope Hummingbird", 
+   "fact" : "The Calliope Hummingbird is the smallest bird in North America, measuring just 3 to 3.5 inches in length and weighing only about 2 grams. They will defend their territory aggressively, even against larger birds such as hawks."
+ }, 
+ { "name" : "Green Heron", 
+   "fact" : "Green Herons are known to use tools, such as dropping bait like insects or bread crumbs onto the water's surface to lure fish within striking distance."
+ }, 
+ {"name" : "Pigeon", 
+  "fact" : "Pigeons have been used to examine scans for signs of breast cancer, as they can be trained to recognize patterns in images with high accuracy; their performance rivals that of trained medical professionals."
+ }
+]

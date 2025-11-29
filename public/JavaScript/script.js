@@ -1,5 +1,4 @@
 
-
 function createBirdCard(bird) {
   const card = document.createElement("div");
   card.classList.add("bird-card");
@@ -64,3 +63,10 @@ async function loadAllBirds(search = "") {
 }
 
 loadAllBirds();
+
+const homeButton = document.getElementById("return-home");
+if (homeButton) {
+  homeButton.addEventListener("click", () => {
+    window.location.href = "/index.html";
+  });
+}

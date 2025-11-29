@@ -4,7 +4,6 @@ const showAllButton = document.getElementById("show-all-button");
 let currentSearch = "";
 
 async function runSearch() {
-  if (!searchInput) return;
   const search = searchInput.value.trim();
   if (!/^[a-z\s'-]+$/i.test(search)) {
     alert("Invalid input: only a-z, spaces, - and '', are allowed.");
@@ -15,18 +14,14 @@ async function runSearch() {
   loadAllBirds(currentSearch);
 }
 
+searchButton.addEventListener("click", runSearch);
 
-  searchButton.addEventListener("click", runSearch);
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") runSearch();
+});
 
-
-  searchInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") runSearch();
-  });
-
-
-
-  showAllButton.addEventListener("click", () => {
-    currentSearch = "";
-    loadAllBirds();
-  });
+showAllButton.addEventListener("click", () => {
+  currentSearch = "";
+  loadAllBirds();
+});
 
