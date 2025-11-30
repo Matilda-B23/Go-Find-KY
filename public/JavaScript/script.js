@@ -70,3 +70,15 @@ if (homeButton) {
     window.location.href = "/index.html";
   });
 }
+const journalButton = document.getElementById("journal-page");
+if (journalButton) {
+  journalButton.addEventListener("click", () => {
+    window.location.href = "/my-journal-page.html";
+  });
+}
+const logButton = document.getElementById("log-page");
+if (logButton) {
+  logButton.addEventListener("click", () => {
+    window.location.href = "/log-page.html";
+  });
+}
