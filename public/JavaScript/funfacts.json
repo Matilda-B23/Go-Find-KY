@@ -18,7 +18,7 @@
    "fact" : "The Yellow-billed Cuckoo will often lay its eggs in the nests of other bird species, a behavior known as brood parasitism."
  }, 
  { "name" : "Laysan Albatross", 
-   "fact" : "The oldest known wild bird is 'Wisdom,' is believed to be over 70 years old. Albatrosses can take long trips because they can sleep while flying."
+   "fact" : "The oldest known wild bird is a Laysan Albatross known as 'Wisdom,' is believed to be over 70 years old. Albatrosses can take long trips because they can sleep while flying."
  }, 
  { "name" : "Pileated Woodpecker", 
    "fact" : "Woodpeckers have a special shock-absorbing skull structure that protects from the impact of pecking and their tongue wraps around their brain for added protection."
@@ -43,5 +43,68 @@
  }, 
  {"name" : "Pigeon", 
   "fact" : "Pigeons have been used to examine scans for signs of breast cancer, as they can be trained to recognize patterns in images with high accuracy; their performance rivals that of trained medical professionals."
- }
+ }, 
+  { "name" : "Eastern Bluebird", 
+    "fact" : "Eastern Bluebirds are cavity nesters, often using old woodpecker holes or nest boxes provided by humans. They are known for their vibrant blue plumage and melodious songs."
+  }, 
+  { "name" : "Snowy Owl", 
+    "fact" : "Snowy Owls are well adapted to cold environments, with thick feathers that provide insulation. They can rotate their heads up to 270 degrees, allowing them to have a wide field of vision while hunting."
+  }, 
+  { "name" : "Red-tailed Hawk", 
+    "fact" : "Red-tailed Hawks are known for their distinctive red tail feathers, which are more prominent in adults. They have excellent eyesight, allowing them to spot prey from a mile away."
+  },
+  { "name" : "Barn Swallow", 
+    "fact" : "Barn Swallows are known for their agile flight and long migrations, traveling thousands of miles between their breeding and wintering grounds. They build cup-shaped mud nests, often under eaves of buildings."
+  }, 
+  { "name" : "Great Horned Owl", 
+    "fact" : "Great Horned Owls have very powerful talons and are capable of taking down prey larger than themselves, including other raptors. They have a distinctive hooting call that is often associated with owls in popular culture."
+  }, 
+  { "name" : "Eastern Screech-Owl", 
+    "fact" : "Eastern Screech Owls are small owls that can be found in a variety of habitats, including urban areas. They have a distinctive trilling call and are known for their ability to camouflage themselves against tree bark."
+  }, 
+  { "name" : "Bald Eagle", 
+    "fact" : "Bald Eagles are not actually bald; their name comes from an old English word 'balde,' meaning white, referring to their distinctive white head and tail feathers. They have a wingspan of up to 7.5 feet."
+  },
+  { "name" : "Common Loon", 
+    "fact" : "Common Loons are known for their haunting calls that echo across northern lakes. They have solid bones, which help them dive deep underwater to catch fish."
+  }, 
+  { "name" : "Eastern Phoebe", 
+    "fact" : "Eastern Phoebes are one of the first migratory birds to return to North America in the spring. They often build their nests on human-made structures, such as bridges and buildings."
+  },
+  { "name" : "Wood Duck", 
+    "fact" : "Wood Ducks are known for their strikingly colorful plumage and unique nesting habits, often nesting in tree cavities near water. They are one of the few duck species that perch in trees."
+  }, 
+  { "name" : "Northern Cardinal", 
+    "fact" : "Northern Cardinals are known for their vibrant red plumage in males, and their melodic songs. They are also known to develop regional 'dialects' in their songs."
+  }, 
+  { "name" : "Eastern Towhee", 
+    "fact" : "Eastern Towhees are known for their distinctive 'drink your tea' song. They are ground-dwelling birds that forage by scratching the leaf litter with both feet to uncover insects and seeds."
+  }, 
+  { "name" : "Tufted Titmouse", 
+    "fact" : "Tufted Titmice are small, energetic birds known for their distinctive crest and curious nature. They often cache food, hiding seeds and nuts in various locations to retrieve later."
+  }, 
+  { "name" : "Scarlet Tanager", 
+    "fact" : "Scarlet Tanagers are known for their bright red plum  age and contrasting black wings and tail. They are migratory birds that travel long distances between their breeding grounds in North America and wintering grounds in South America."
+  },
+  { "name" : "Baltimore Oriole", 
+    "fact" : "Baltimore Orioles are known for their vibrant orange and black plumage. They build intricate hanging nests, often woven from plant fibers and suspended from tree branches."
+  }, 
+  { "name" : "Cedar Waxwing", 
+    "fact" : "Cedar Waxwings are known for their sleek appearance and distinctive red wax-like tips on their wing feathers. They are also known to engage in 'fruit dropping,' where they drop fruit from trees to the ground to eat the fallen pieces."
+  }, 
+  { "name" : "Eastern Kingbird", 
+    "fact" : "Eastern Kingbirds are aggressive defenders of their territory, often chasing away much larger birds. They have a distinctive black and white plumage and a loud, sharp call."
+  }, 
+  { "name" : "Bicknell's Thrush", 
+    "fact" : "Bicknell's Thrushes are known for their songs that vary regionally, with different populations having distinct song patterns. They breed in high-elevation forests in the northeastern United States and Canada."
+  }, 
+  { "name" : "California Quail", 
+    "fact" : "California Quails are known for their distinctive topknot of feathers on their heads and their social behavior, often forming coveys of up to 20 birds. They are ground-dwelling birds that forage for seeds and insects."
+  },
+  { "name" : "Mallard", 
+    "fact" : "Mallards are one of the most well-known and widespread duck species in the world. They are known for their distinctive iridescent green head."
+  }, 
+  { "name" : "Great Blue Heron", 
+    "fact" : "Great Blue Herons are the largest herons in North America, standing up to 4.5 feet tall with a wingspan of up to 6.6 feet. They are skilled hunters, using their sharp beaks to catch fish and other aquatic prey."
+  }
 ]

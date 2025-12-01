@@ -1,4 +1,4 @@
-
+//Below helper function to create bird cards so code is reusable//
 function createBirdCard(bird) {
   const card = document.createElement("div");
   card.classList.add("bird-card");
@@ -42,7 +42,7 @@ function createBirdCard(bird) {
   card.appendChild(commentArea);
   return card;
 }
-
+//Below function to load all birds and display them//
 async function loadAllBirds(search = "") {
   const birdContainer = document.getElementById("bird-container");
   birdContainer.innerHTML = "";
@@ -63,7 +63,7 @@ async function loadAllBirds(search = "") {
 }
 
 loadAllBirds();
-
+//Below, button functionality for all pages// 
 const homeButton = document.getElementById("return-home");
 if (homeButton) {
   homeButton.addEventListener("click", () => {

@@ -14,6 +14,13 @@ async function loadSeenBirds() {
         const stats = document.getElementById('journal-stats');
         stats.textContent = `You have seen ${seenBirds.length} out of ${birds.length} birds.`;
 
+        if (seenBirds.length === 0) {
+            const noBirds = document.createElement('p');
+            noBirds.textContent = 'No birds marked as seen; get out there and see some birds!';
+            seenBirdContainer.appendChild(noBirds);
+            return;
+        }
+
         seenBirds.forEach(bird => {
             const card = createBirdCard(bird);
             seenBirdContainer.appendChild(card);
