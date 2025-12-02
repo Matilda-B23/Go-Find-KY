@@ -27,6 +27,7 @@ body {
   background-repeat: no-repeat;
   position: relative;
   border: #8d7b54 8px groove;
+  margin-bottom: 10px;
 }
 .bird-card img {
   margin-top: 20px;
@@ -110,6 +111,7 @@ header h1 {
   background-color: #6f7d41;
   border-bottom: #4b5817 8px groove;
   text-align: center;
+  margin-bottom: 10px;
 }
 footer {
   background-color: #6f7d41;
@@ -132,4 +134,7 @@ footer {
   color: #3e4913;
   font-size: x-large;
   font-weight: bold;
+}
+footer {
+  text-align: center;
 }
