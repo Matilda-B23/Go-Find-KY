@@ -48,6 +48,7 @@ function createBirdCard(bird) {
 //Below function to load all birds and display them//
 async function loadAllBirds(search = "") {
   const birdContainer = document.getElementById("bird-container");
+  if (!birdContainer) return; 
   birdContainer.innerHTML = "";
   try {
     const response = await fetch(

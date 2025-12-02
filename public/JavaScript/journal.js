@@ -11,8 +11,8 @@ async function loadSeenBirds() {
             return savedData.seen === true;
         });
 
-        const stats = document.getElementById('journal-stats');
-        stats.textContent = `You have seen ${seenBirds.length} out of ${birds.length} birds.`;
+        document.getElementById("seen-count").textContent = seenBirds.length; 
+        document.getElementById("total-count").textContent = birds.length; 
 
         if (seenBirds.length === 0) {
             const noBirds = document.createElement('p');
