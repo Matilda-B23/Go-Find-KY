@@ -16,7 +16,7 @@ body {
     #4c7840 75%,
     #4b5817 100%
   );
-  font-family: sans-serif;
+  font-family: "Nunito", "Segoe UI", Arial, sans-serif;
 }
 .banner {
   width: 100%;
@@ -26,10 +26,37 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  border: #8d7b54 8px groove;
 }
 .bird-card img {
   margin-top: 20px;
   width: 200px; 
   height: 150px;
   object-fit: contain;
+}
+.bird-card, .spotlight-card {
+  background-color:#c8b078;
+  border: #8d7b54  8px groove;
+  border-radius: 10px;
+  max-width: fit-content;
+  text-align: center;
+}
+#bird-container, #seen-bird-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 10px;
+  padding: 10px;
+}
+.img-wrapper {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spotlight-card {
+ background-color: antiquewhite;
 }

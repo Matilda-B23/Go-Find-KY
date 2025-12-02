@@ -2,6 +2,8 @@
 function createBirdCard(bird) {
   const card = document.createElement("div");
   card.classList.add("bird-card");
+  const imgWrapper = document.createElement("div");
+  imgWrapper.classList.add("img-wrapper");
   const img = document.createElement("img");
   img.src = bird.images[0];
   img.onerror = () => (img.src = "/images/no-image-available.jpg");
@@ -35,7 +37,8 @@ function createBirdCard(bird) {
     };
     localStorage.setItem(`bird-${bird.name}`, JSON.stringify(birdData));
   });
-  card.appendChild(img);
+  imgWrapper.appendChild(img);
+  card.appendChild(imgWrapper);
   card.appendChild(name);
   card.appendChild(status);
   card.appendChild(seenCheckbox);
