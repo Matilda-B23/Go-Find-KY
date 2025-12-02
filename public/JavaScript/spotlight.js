@@ -28,19 +28,20 @@ async function pickRandomBird() {
   function createSpotlightCard(bird) {
     const card = document.createElement("div");
     card.classList.add("spotlight-card");
-
+const imgWrapper = document.createElement("div");
+    imgWrapper.classList.add("img-wrapper");
     const img = document.createElement("img");
     img.src = bird.images[0];
     img.onerror = () => (img.src = "/images/no-image-available.jpg");
-
+const spotlightHeader = document.createElement("h3");
+    spotlightHeader.textContent = "Species Spotlight: "+ bird.name; 
     const name = document.createElement("p");
-    name.classList.add("bird-name");
-    name.textContent = bird.name;
-    card.appendChild(img);
-    card.appendChild(name);
+    imgWrapper.appendChild(img);
+    card.appendChild(imgWrapper);
+    card.appendChild(spotlightHeader); 
     if (bird.fact) {
       const fact = document.createElement("p");
-      fact.textContent = `Fun Fact: ${bird.fact}`;
+      fact.textContent = `${bird.fact}`;
       card.appendChild(fact);
     }
     return card;
