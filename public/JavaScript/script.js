@@ -1,5 +1,9 @@
 //Below helper function to create bird cards so code is reusable//
 function createBirdCard(bird) {
+  const isLogPage = window.location.pathname.includes("log-page.html");
+  const isJournalPage = window.location.pathname.includes(
+    "my-journal-page.html"
+  );
   const card = document.createElement("div");
   card.classList.add("bird-card");
   const imgWrapper = document.createElement("div");
@@ -10,51 +14,78 @@ function createBirdCard(bird) {
   const name = document.createElement("p");
   name.classList.add("bird-name");
   name.textContent = bird.name;
-  const status = document.createElement("p");
-  status.textContent = "Conservation status - " + bird.status;
+  const statusLine = document.createElement("p");
+  statusLine.textContent = "Conservation status - ";
+  const statusInfo = document.createElement("p");
+  statusInfo.textContent = bird.status;
   const saved = localStorage.getItem(`bird-${bird.name}`);
   const savedData = saved ? JSON.parse(saved) : null;
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.checked = savedData?.seen || false;
   const seenCheckbox = document.createElement("label");
-  seenCheckbox.textContent = "Seen";
+  seenCheckbox.textContent = " Seen";
   seenCheckbox.prepend(checkbox);
-  const commentArea = document.createElement("textarea");
-  commentArea.value = savedData?.comment || "";
-
-  checkbox.addEventListener("change", () => {
-    const birdData = {
-      seen: checkbox.checked,
-      comment: commentArea.value,
-    };
-    localStorage.setItem(`bird-${bird.name}`, JSON.stringify(birdData));
+  let commentContent;
+  let editButton;
+  if (isJournalPage) {
+    commentContent = document.createElement("p");
+    commentContent.classList.add("journal-comment");
+    commentContent.textContent = savedData?.comment || "No comment yet.";
+    editButton = document.createElement("button");
+    editButton.textContent = "Edit Comment";
+    editButton.classList.add("edit-button");
+    editButton.addEventListener("click", () => {
+      const saved = localStorage.getItem(`bird-${bird.name}`);
+      const savedData = saved ? JSON.parse(saved) : {comment : "", seen: false }; 
+      openCommentPopup(
+        bird,
+        savedData?.seen || false,
+        savedData?.comment || ""
+      );
+    });
+  }
+  const saveButton = document.createElement("button");
+  saveButton.textContent = "Log Sighting";
+  saveButton.classList.add("save-button");
+  if (savedData && window.location.pathname.includes("my-journal-page.html")) {
+    saveButton.style.display = "none";
+  }
+  saveButton.addEventListener("click", () => {
+    openCommentPopup(bird, checkbox.checked, savedData?.comment || "");
   });
-  commentArea.addEventListener("input", () => {
+  checkbox.addEventListener("change", () => {
+    const saved = localStorage.getItem(`bird-${bird.name}`); 
+    const savedData = saved ? JSON.parse(saved) : { comment : ""}; 
     const birdData = {
       seen: checkbox.checked,
-      comment: commentArea.value,
+      comment: savedData.comment || "",
     };
     localStorage.setItem(`bird-${bird.name}`, JSON.stringify(birdData));
   });
   imgWrapper.appendChild(img);
   card.appendChild(imgWrapper);
   card.appendChild(name);
-  card.appendChild(status);
+  card.appendChild(statusLine);
+  card.appendChild(statusInfo);
   card.appendChild(seenCheckbox);
-  card.appendChild(commentArea);
+card.appendChild(saveButton); 
+if (isJournalPage) {
+  card.appendChild(commentContent); 
+  card.appendChild(editButton); 
+}
   return card;
 }
 //Below function to load all birds and display them//
 async function loadAllBirds(search = "") {
   const birdContainer = document.getElementById("bird-container");
-  if (!birdContainer) return; 
+  if (!birdContainer) return;
   birdContainer.innerHTML = "";
   try {
     const response = await fetch(
-  `/api/birds${search ? `?search=${encodeURIComponent(search)}` : ""}`
-    ); 
-    
+      `/api/birds${search ? `?search=${encodeURIComponent(search)}` : ""}`
+    );
+
     const birds = await response.json();
 
     birds.forEach((bird) => {
@@ -67,7 +98,7 @@ async function loadAllBirds(search = "") {
 }
 
 loadAllBirds();
-//Below, button functionality for all pages// 
+//Below, button functionality for all pages//
 const homeButton = document.getElementById("return-home");
 if (homeButton) {
   homeButton.addEventListener("click", () => {
@@ -86,3 +117,39 @@ if (logButton) {
     window.location.href = "/log-page.html";
   });
 }
+function openCommentPopup(bird, seenValue, existingComment) {
+  const popup = document.getElementById("comment-popup");
+  const text = document.getElementById("popup-text");
+  const commentInput = document.getElementById("popup-comment");
+  popup.dataset.birdName = bird.name;
+  popup.dataset.seen = seenValue;
+  text.textContent = "Add a comment?";
+  commentInput.style.display = "block";
+  commentInput.value = existingComment || "";
+  popup.style.display = "block";
+}
+
+document.getElementById("popup-save").addEventListener("click", () => {
+  const popup = document.getElementById("comment-popup");
+  const birdName = popup.dataset.birdName;
+  const seen = popup.dataset.seen === "true";
+  const comment = document.getElementById("popup-comment").value;
+  const popupSaveButton = document.getElementById("popup-save");
+  const birdData = {
+    seen: seen,
+    comment: comment,
+  };
+
+  localStorage.setItem(`bird-${birdName}`, JSON.stringify(birdData));
+  const text = document.getElementById("popup-text");
+  const commentBox = document.getElementById("popup-comment");
+  text.textContent = "Sighting saved!";
+  commentBox.style.display = "none";
+  popupSaveButton.style.display = "none"; 
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 1500);
+  if (window.location.pathname.includes("my-journal-page.html")) {
+  window.location.reload(); 
+  }
+});
