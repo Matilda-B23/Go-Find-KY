@@ -1,8 +1,10 @@
 # Go-Find-KY
 
-A web app designed to be used to **log sightings of birds**, with a selection of **300+ birds** in North America.
-Made as a passion project, because I love to bird-watch. Wanted an easier way to keep track of what birds I have seen as I spot them. 
-Also wanted to spread awareness of species that are declining in population, because a bird you may spot every day could eventually become extinct. 
+A web app designed to be used to **log sightings of birds**, with a selection of **300+ birds** in North America, and track personal observations using the Nuthatch API.
+
+
+Made as a passion project, because I love to bird-watch. I wanted an easier way to keep track of what birds I have seen as I spot them. 
+Also wanted to spread awareness of species that are declining in population, because a bird you may spot every day could eventually become extinct.
 
 ## How do I use it?
 
@@ -18,12 +20,16 @@ Also wanted to spread awareness of species that are declining in population, bec
 ---
 - **nodemon v 3.1.10** 
    Automatically restarts server on file changes. 
+---
 
-1. **To install, open your terminal and run:** `npm install`
-2. **Inside your ENV file, you must create a key with the parameters:**
+### Instructions for running
+
+1. **Clone down the repo.**
+2. **To install dependencies, open your terminal and run:** `npm install`
+3. **Inside your** `env` **file, you must create a key with the parameters:**
 `API_KEY=YourAPIKeyGoesHere`
 [You can receive an API key here.](https://nuthatch.lastelm.software/getKey.html)
-3. **You can then open your terminal and run** `npm start` **to open the site.**
+4. **You can then open your terminal and run** `npm start` **to open the site.**
 --- 
 ## Features
 
