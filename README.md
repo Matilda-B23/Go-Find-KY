@@ -71,7 +71,7 @@ You can also edit previous comments here, using the **edit comments button**.
 
 ---
 - HTML
-- CSS, including Flexbox and Grid
+- CSS, including Flexbox and Grid and media queries to ensure responsiveness.
 - JavaScript 
 - API being used to **dynamically display information in my app by analyzing this data stored in arrays, and objects.**
 - **Persisting important data to the user's local storage, including after refresh and reload.**  (Saving sighting, comment feature) 
@@ -103,6 +103,8 @@ You can also edit previous comments here, using the **edit comments button**.
 (https://www.joshwcomeau.com/css/custom-css-reset)
 
 - Credit to all of my wonderful mentors, and peers/classmates from Code:You who helped and inspired me throughout this whole process! 
+
+- Credit for bird search symbol goes to: <a href="https://www.flaticon.com/free-icons/ornithology" title="ornithology icons">Ornithology icons created by pikepicture - Flaticon</a> 
 
 ### Final note 
 
