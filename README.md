@@ -45,7 +45,7 @@ Upon clicking the **Log a Sighting** button you will be taken to the **log page.
   
 ---
 
-![Screenshot of the log page featuring premade bird cards](public/Images/Bird-Journal-Screenshots/bird-cards.png)
+![Screenshot of the log page featuring log page features.](/public/Images/Bird-Journal-Screenshots/log-page.png)
 
 Here, you can **search for a particular bird**, mark birds as **seen**, and optionally add **comments** for birds you have marked seen. 
 
