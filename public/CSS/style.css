@@ -93,7 +93,7 @@ button:hover {
   margin: 10px 0 5px 0;
 }
 .intro-text,
-.log-text-content {
+.log-text-content, #journal-intro {
   padding: 20px;
   font-size: 1em;
   text-align: center;

@@ -1,16 +1,4 @@
 
-#journal-stats {
-  display: table;
-  margin: 0 auto;
-  margin-top: 10px;
-  background-color: #8d7b54;
-  border-radius: 10px;
-  font-size: larger;
-  padding: 5px 12px;
-  border: #63563b;
-  border-width: 6px;
-  border-style: groove;
-}
 #seen-count,
 #total-count {
   color: #3e4913;
@@ -25,3 +13,43 @@
   border-style: groove;
   border-color: #63563b;
 }
+#journal-stats {
+  display: table;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: #8d7b54;
+  border-radius: 10px;
+  font-size: larger;
+  padding: 5px 12px;
+  border: #63563b;
+  border-width: 6px;
+  border-style: groove;
+}
+@media screen and (max-width: 767px )   {
+   nav button {
+        padding: 5px;
+        text-wrap: nowrap;
+        font-size: medium;
+        font-weight: normal;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    #journal-stats {
+      font-size: large;
+      text-align: center;
+    }
+}
+@media screen and (max-width: 500px ) {
+  #seen-bird-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  #seen-bird-container .bird-card {
+    width: 100%;
+    max-width: none;
+  }}

@@ -25,3 +25,12 @@ showAllButton.addEventListener("click", () => {
   loadAllBirds();
 });
 
+function updatePlaceholder() {
+  if (window.innerWidth < 375) {
+    searchInput.placeholder = "Search";
+  } else {
+    searchInput.placeholder = "Search for a bird...";
+  }
+}
+window.addEventListener("load", updatePlaceholder)
+window.addEventListener("resize", updatePlaceholder)

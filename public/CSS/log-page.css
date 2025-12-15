@@ -27,3 +27,60 @@ background-color: whitesmoke;
 font-size: xx-large;
 text-align: center;
 }
+@media screen and (max-width: 740px ) {
+    nav button {
+        padding: 10px;
+        text-wrap: nowrap;
+        font-size: medium;
+        font-weight: normal;
+        width: 50%;
+        margin: 5px;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+  #bird-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  #bird-container .bird-card {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+  #bird-search {
+    text-align: start;
+    font-size: medium;
+    padding: 10px;
+    height: 40px;
+  }
+  #search-button, #show-all-button {
+    height: 40px;
+    text-align: center;
+    font-size: small;
+    padding: 10px;
+  }
+  .search-bar {
+    gap: 0px; 
+    text-align: center;
+  }
+  .search-icon {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 500px ) {
+  #bird-container {
+    grid-template-columns: 1fr;
+  }
+  #bird-search {
+    font-size: small;
+    padding: 5px;
+  }
+  nav button {
+    font-size: small;
+  }
+}
