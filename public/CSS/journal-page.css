@@ -1,0 +1,27 @@
+
+#journal-stats {
+  display: table;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: #8d7b54;
+  border-radius: 10px;
+  font-size: larger;
+  padding: 5px 12px;
+  border: #63563b;
+  border-width: 6px;
+  border-style: groove;
+}
+#seen-count,
+#total-count {
+  color: #3e4913;
+  font-size: x-large;
+  font-weight: bold;
+}
+.journal-comment {
+  background-color: #9b865c;
+  border-radius: 8px;
+  padding: 10px;
+  border-width: 3px;
+  border-style: groove;
+  border-color: #63563b;
+}
