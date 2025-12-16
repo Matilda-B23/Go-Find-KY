@@ -30,7 +30,7 @@ Also wanted to spread awareness of species that are declining in population, bec
 4. **Inside your** `.env` **file, you must create a key with the parameters:**
 `API_KEY=YourAPIKeyGoesHere`
 [You can receive an API key here.](https://nuthatch.lastelm.software/getKey.html)
-1. **You can then open your terminal and run** `npm start` **to open the site.**
+5. **You can then open your terminal and run** `npm start` **to open the site.**
 --- 
 ## Features
 
