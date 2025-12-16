@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.use(express.static("public"));
 app.get("/api/birds", async (req, res) => {
   try {
@@ -50,3 +50,4 @@ app.get("/api/birds", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+console.log(`Visit your site at https://your-project-name.up.railway.app`);
