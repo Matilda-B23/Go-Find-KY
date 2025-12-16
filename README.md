@@ -26,10 +26,11 @@ Also wanted to spread awareness of species that are declining in population, bec
 
 1. **Clone down the repo.**
 2. **To install dependencies, open your terminal and run:** `npm install`
-3. **Inside your** `env` **file, you must create a key with the parameters:**
+3. **In the root folder of the project, create a file named** `.env`
+4. **Inside your** `.env` **file, you must create a key with the parameters:**
 `API_KEY=YourAPIKeyGoesHere`
 [You can receive an API key here.](https://nuthatch.lastelm.software/getKey.html)
-4. **You can then open your terminal and run** `npm start` **to open the site.**
+1. **You can then open your terminal and run** `npm start` **to open the site.**
 --- 
 ## Features
 
@@ -73,9 +74,15 @@ You can also edit previous comments here, using the **edit comments button**.
 - HTML
 - CSS, including Flexbox and Grid and media queries to ensure responsiveness.
 - JavaScript 
+
+### Project Requirements / Features
+
 - API being used to **dynamically display information in my app by analyzing this data stored in arrays, and objects.**
+  
 - **Persisting important data to the user's local storage, including after refresh and reload.**  (Saving sighting, comment feature) 
+  
 - **Creating a Node.js server using Express** 
+  
 - **Validating user input and either preventing invalid input or informing user**
   (search bar feature)
 

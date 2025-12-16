@@ -130,30 +130,30 @@ function openCommentPopup(bird, seenValue, existingComment) {
   commentInput.value = existingComment || "";
   popup.style.display = "block";
 }
-if (!window.location.pathname.includes("index.html")){
-document.getElementById("popup-save").addEventListener("click", () => {
-  const popup = document.getElementById("comment-popup");
-  const birdName = popup.dataset.birdName;
-  const seen = popup.dataset.seen === "true";
-  const comment = document.getElementById("popup-comment").value;
-  const popupSaveButton = document.getElementById("popup-save");
-  const birdData = {
-    seen: seen,
-    comment: comment,
-  };
-if (!window.location.pathname.includes("index.html")){
-  localStorage.setItem(`bird-${birdName}`, JSON.stringify(birdData));
-  const text = document.getElementById("popup-text");
-  const commentBox = document.getElementById("popup-comment");
-  text.textContent = "Sighting saved!";
-  commentBox.style.display = "none";
-  popupSaveButton.style.display = "none";
-  setTimeout(() => {
-    popup.style.display = "none";
-  }, 2000);
-  if (window.location.pathname.includes("my-journal-page.html")) {
-    window.location.reload();
-  }
-}
-});
+if (!window.location.pathname.includes("index.html")) {
+  document.getElementById("popup-save").addEventListener("click", () => {
+    const popup = document.getElementById("comment-popup");
+    const birdName = popup.dataset.birdName;
+    const seen = popup.dataset.seen === "true";
+    const comment = document.getElementById("popup-comment").value;
+    const popupSaveButton = document.getElementById("popup-save");
+    const birdData = {
+      seen: seen,
+      comment: comment,
+    };
+    if (!window.location.pathname.includes("index.html")) {
+      localStorage.setItem(`bird-${birdName}`, JSON.stringify(birdData));
+      const text = document.getElementById("popup-text");
+      const commentBox = document.getElementById("popup-comment");
+      text.textContent = "Sighting saved!";
+      commentBox.style.display = "none";
+      popupSaveButton.style.display = "none";
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 2000);
+      if (window.location.pathname.includes("my-journal-page.html")) {
+        window.location.reload();
+      }
+    }
+  });
 }

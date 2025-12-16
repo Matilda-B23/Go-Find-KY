@@ -32,5 +32,5 @@ function updatePlaceholder() {
     searchInput.placeholder = "Search for a bird...";
   }
 }
-window.addEventListener("load", updatePlaceholder)
-window.addEventListener("resize", updatePlaceholder)
+window.addEventListener("load", updatePlaceholder);
+window.addEventListener("resize", updatePlaceholder);

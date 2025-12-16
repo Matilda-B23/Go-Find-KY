@@ -35,29 +35,28 @@
   border-width: 8px;
   border-color: #8d7b54;
 }
-@media screen and (max-width: 767px )   {
-    .main-content .intro-text {
-        margin: 0;
-        width: 100%;
-    }
-    nav button {
-        padding: 20px;
-        text-wrap: nowrap;
-        font-size: medium;
-        font-weight: normal;
-        width: 50%;
-    }
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-       .intro-text {
-        font-size: small;
-    }
-    .main-content {
-        display: flex;
-        flex-direction: column;
-    }
- 
+@media screen and (max-width: 767px) {
+  .main-content .intro-text {
+    margin: 0;
+    width: 100%;
+  }
+  nav button {
+    padding: 20px;
+    text-wrap: nowrap;
+    font-size: medium;
+    font-weight: normal;
+    width: 50%;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .intro-text {
+    font-size: small;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
 }

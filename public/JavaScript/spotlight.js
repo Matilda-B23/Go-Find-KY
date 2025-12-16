@@ -1,5 +1,3 @@
-
-
 async function pickRandomBird() {
   try {
     const res = await fetch("/JavaScript/funfacts.json");
@@ -28,17 +26,17 @@ async function pickRandomBird() {
   function createSpotlightCard(bird) {
     const card = document.createElement("div");
     card.classList.add("spotlight-card");
-const imgWrapper = document.createElement("div");
+    const imgWrapper = document.createElement("div");
     imgWrapper.classList.add("img-wrapper");
     const img = document.createElement("img");
     img.src = bird.images[0];
     img.onerror = () => (img.src = "/images/no-image-available.jpg");
-const spotlightHeader = document.createElement("h3");
-    spotlightHeader.textContent = "Species Spotlight: "+ bird.name; 
+    const spotlightHeader = document.createElement("h3");
+    spotlightHeader.textContent = "Species Spotlight: " + bird.name;
     const name = document.createElement("p");
     imgWrapper.appendChild(img);
     card.appendChild(imgWrapper);
-    card.appendChild(spotlightHeader); 
+    card.appendChild(spotlightHeader);
     if (bird.fact) {
       const fact = document.createElement("p");
       fact.textContent = `${bird.fact}`;
