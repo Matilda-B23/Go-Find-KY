@@ -1,4 +1,4 @@
-# Go-Find-KY
+# My Bird Journal :bird:
 
 A web app designed to be used to **log sightings of birds**, with a selection of **300+ birds** in North America, and track personal observations using the Nuthatch API.
 
