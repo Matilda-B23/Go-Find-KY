@@ -14,17 +14,21 @@
     <title>Log Sighting</title>
   </head>
   <body>
+    <!-- Page header with page title. -->
     <header><h1>Log Sighting</h1></header>
+    <!-- Search bar display and functionality buttons. -->
     <div class="search-bar">
       <img class="search-icon" src="Images/search.png" />
       <input type="text" id="bird-search" placeholder="Search for a bird..." />
       <button id="search-button">Search</button>
       <button id="show-all-button">Show all</button>
     </div>
+    <!-- Navigation buttons for homepage and journal. -->
     <nav>
       <button id="return-home">Return to homepage</button>
       <button id="journal-page">My Journal</button>
     </nav>
+    <!-- Main text content, instructions. -->
     <div class="log-text-content">
       <h1>How to use</h1>
       <p>
@@ -47,12 +51,14 @@
         to species threatened with extinction.
       </p>
     </div>
+    <!-- Section for containing and appending bird cards, comment box popup, and save button. -->
     <div id="bird-container"></div>
     <div id="comment-popup">
       <p id="popup-text">Add a comment?</p>
       <textarea id="popup-comment"></textarea>
       <button id="popup-save">Save</button>
     </div>
+    <!-- Footer section, and scripts. -->
     <footer>My Bird Journal created by Matilda Bowling 2025</footer>
     <script src="/JavaScript/script.js" defer></script>
     <script src="/JavaScript/search.js" defer></script>

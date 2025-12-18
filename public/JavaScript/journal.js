@@ -1,3 +1,4 @@
+//Load birds marked as "seen" in user's localstorage, and renders them to the page.
 async function loadSeenBirds() {
   const seenBirdContainer = document.getElementById("seen-bird-container");
   seenBirdContainer.innerHTML = "";
@@ -10,7 +11,7 @@ async function loadSeenBirds() {
       const savedData = JSON.parse(saved);
       return savedData.seen === true;
     });
-
+    //Displaying seen versus total number of birds.
     document.getElementById("seen-count").textContent = seenBirds.length;
     document.getElementById("total-count").textContent = birds.length;
 
@@ -21,7 +22,7 @@ async function loadSeenBirds() {
       seenBirdContainer.appendChild(noBirds);
       return;
     }
-
+    //Creating bird cards for each bird seen.
     seenBirds.forEach((bird) => {
       const card = createBirdCard(bird);
       seenBirdContainer.appendChild(card);

@@ -14,27 +14,33 @@
     <title>My Journal</title>
   </head>
   <body>
+    <!-- Page header with page title.-->
     <header><h1>My Journal</h1></header>
+    <!-- Navigation buttons to home and log page. -->
     <nav>
       <button id="return-home">Return to homepage</button>
       <button id="log-page">Go to log page</button>
     </nav>
+    <!-- Section for appending and displaying user's seen stats. -->
     <p id="journal-stats">
       You have seen <span id="seen-count">#</span> out of
       <span id="total-count">###</span> total birds!
     </p>
+    <!-- Introduction/ instruction section. -->
     <p id="journal-intro">
       This is your journal section, where you can view all of your logged birds,
       and all of your comments in one place. It makes it easy to review your
       bird watching history. I've also added a counter showing how many species
       you've seen out of the total available. Aim to see them all!
     </p>
+    <!-- Section for appending and displaying seen birds and popup functionality to edit comments. -->
     <div id="seen-bird-container"></div>
     <div id="comment-popup">
       <p id="popup-text">Add a comment?</p>
       <textarea id="popup-comment"></textarea>
       <button id="popup-save">Save</button>
     </div>
+    <!-- Footer and script section. -->
     <footer>My Bird Journal created by Matilda Bowling 2025</footer>
     <script src="/JavaScript/script.js" defer></script>
     <script src="/JavaScript/journal.js" defer></script>

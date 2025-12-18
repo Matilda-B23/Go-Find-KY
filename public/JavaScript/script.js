@@ -1,4 +1,6 @@
-//Below helper function to create bird cards so code is reusable//
+//Frontend logic for displaying birds, handling user sightings, comments, and navigation.
+//Creates a bird card element with image, name, status, seen checkbox, and comment functionality.
+//Adjusts behavior based on page context. (log vs journal page)
 function createBirdCard(bird) {
   const isLogPage = window.location.pathname.includes("log-page.html");
   const isJournalPage = window.location.pathname.includes(
@@ -53,6 +55,7 @@ function createBirdCard(bird) {
   if (savedData && window.location.pathname.includes("my-journal-page.html")) {
     saveButton.style.display = "none";
   }
+  //Save comment and seen status to local storage and update UI.
   saveButton.addEventListener("click", () => {
     openCommentPopup(bird, checkbox.checked, savedData?.comment || "");
   });
@@ -63,6 +66,7 @@ function createBirdCard(bird) {
       seen: checkbox.checked,
       comment: savedData.comment || "",
     };
+    //Saving seen data to correspond with the bird's name.
     localStorage.setItem(`bird-${bird.name}`, JSON.stringify(birdData));
   });
   imgWrapper.appendChild(img);
@@ -78,7 +82,8 @@ function createBirdCard(bird) {
   }
   return card;
 }
-//Below function to load all birds and display them//
+//Loads all birds from the API and appends them to the DOM.
+//Accepts optional search term for filtering.
 async function loadAllBirds(search = "") {
   const birdContainer = document.getElementById("bird-container");
   if (!birdContainer) return;
@@ -100,7 +105,7 @@ async function loadAllBirds(search = "") {
 }
 
 loadAllBirds();
-//Below, button functionality for all pages//
+//Base button functionality for all pages.
 const homeButton = document.getElementById("return-home");
 if (homeButton) {
   homeButton.addEventListener("click", () => {
@@ -119,6 +124,7 @@ if (logButton) {
     window.location.href = "/log-page.html";
   });
 }
+//Function controlling comment box display.
 function openCommentPopup(bird, seenValue, existingComment) {
   const popup = document.getElementById("comment-popup");
   const text = document.getElementById("popup-text");
@@ -130,18 +136,20 @@ function openCommentPopup(bird, seenValue, existingComment) {
   commentInput.value = existingComment || "";
   popup.style.display = "block";
 }
+//Only show certain buttons/ comment fields only on certain pages.
 if (!window.location.pathname.includes("index.html")) {
-  document.getElementById("popup-save").addEventListener("click", () => {
-    const popup = document.getElementById("comment-popup");
-    const birdName = popup.dataset.birdName;
-    const seen = popup.dataset.seen === "true";
-    const comment = document.getElementById("popup-comment").value;
-    const popupSaveButton = document.getElementById("popup-save");
-    const birdData = {
-      seen: seen,
-      comment: comment,
-    };
-    if (!window.location.pathname.includes("index.html")) {
+  const popupSaveButton = document.getElementById("popup-save");
+  if (popupSaveButton) {
+    popupSaveButton.addEventListener("click", () => {
+      const popup = document.getElementById("comment-popup");
+      const birdName = popup.dataset.birdName;
+      const seen = popup.dataset.seen === "true";
+      const comment = document.getElementById("popup-comment").value;
+      const popupSaveButton = document.getElementById("popup-save");
+      const birdData = {
+        seen: seen,
+        comment: comment,
+      };
       localStorage.setItem(`bird-${birdName}`, JSON.stringify(birdData));
       const text = document.getElementById("popup-text");
       const commentBox = document.getElementById("popup-comment");
@@ -154,6 +162,6 @@ if (!window.location.pathname.includes("index.html")) {
       if (window.location.pathname.includes("my-journal-page.html")) {
         window.location.reload();
       }
-    }
-  });
+    });
+  }
 }

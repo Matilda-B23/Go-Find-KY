@@ -1,3 +1,4 @@
+//Fetch a random bird and corresponding fun fact, then display it in a spotlight card.
 async function pickRandomBird() {
   try {
     const res = await fetch("/JavaScript/funfacts.json");
@@ -16,13 +17,13 @@ async function pickRandomBird() {
       ...apiBird,
       fact: selectedFact.fact,
     };
-
     const spotlightContainer = document.getElementById("spotlight-container");
     spotlightContainer.appendChild(createSpotlightCard(selectedBird));
+    //Log errors if fetching data or facts fails.
   } catch (error) {
     console.error("Error loading spotlight:", error);
   }
-
+  //Create a card element with bird image, name and fun fact for display.
   function createSpotlightCard(bird) {
     const card = document.createElement("div");
     card.classList.add("spotlight-card");
@@ -33,7 +34,6 @@ async function pickRandomBird() {
     img.onerror = () => (img.src = "/images/no-image-available.jpg");
     const spotlightHeader = document.createElement("h3");
     spotlightHeader.textContent = "Species Spotlight: " + bird.name;
-    const name = document.createElement("p");
     imgWrapper.appendChild(img);
     card.appendChild(imgWrapper);
     card.appendChild(spotlightHeader);
